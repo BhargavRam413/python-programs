@@ -1,0 +1,17 @@
+def calculate_average_grade():
+    scores = []
+
+    while True:
+        score = input("Enter a score (or 'q' to quit): ")
+        if score.lower() == 'q':
+            break
+        score = float(score)
+        scores.append(score)
+
+    if scores:
+        average_grade = sum(scores) / len(scores)
+        print("The average grade is:", average_grade)
+    else:
+        print("No scores entered.")
+
+calculate_average_grade()
